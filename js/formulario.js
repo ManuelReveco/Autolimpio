@@ -25,7 +25,7 @@ boton.addEventListener("click", function (evento) {
         subTotal = pago1 + pago2;
         iva=subTotal*19/100;
         total=subTotal+iva;
-        alert(txtNombre.value+" "+txtApellido.value+"/n total sin iva $ "+subTotal+" iva $"+iva+" total a pagar $ "+total);
+        alert("Nombre "+txtNombre.value+" "+txtApellido.value+"\nTotal sin iva $ "+subTotal+"\nIva $"+iva+"\nTotal a pagar $ "+total);
         //montoCancelar.value = total;
     
     }
