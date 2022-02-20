@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AutoLimpio</title>
+    <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -16,48 +17,49 @@
             <h1>Auto Limpio</h1>
         </div>
         <form id="formulario-autolimpio" class="row g-3">
-            <h1>Datos Cliente</h1>
+            <h2>Datos Cliente</h2>
             <div class="col-md-8">
                 <label for="validationServer01" class="form-label">rut</label>
-                <input type="text" class="form-control is-valid" id="validationServer01" value="12345678" required>
+                <input type="number" class="form-control" id="validationServer01" placeholder="12345678"  maxlength="8" required>
                 <div class="valid-feedback">
-                    Looks good!
+                    debe ingresar maximo 8 digitos
                 </div>
+                <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="col-md-4">
                 <label for="validationServer02" class="form-label">digito verificador</label>
-                <input type="text" class="form-control is-valid" id="validationServer02" value="" required>
+                <input type="text" class="form-control" id="validationServer02" maxlength="1" pattern="/^[0-9k-K]/" required placeholder=" 0-9 k K">
                 <div class="valid-feedback">
-                    Looks good!
+                    0-9 k K
                 </div>
             </div>
             <div class="col-md-6">
                 <label for="txtNombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control is-valid" id="txtNombre" value="" required>
+                <input type="text" class="form-control" id="txtNombre" value="" required placeholder=" ingrese su nombre">
                 <div class="valid-feedback">
-                    Looks good!
+                    ingrese su nombre
                 </div>
             </div>
             <div class="col-md-6">
                 <label for="txtApellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control is-valid" id="txtApellido" value="" required>
+                <input type="text" class="form-control" id="txtApellido" value="" required placeholder="ingrese su apellido">
                 <div class="valid-feedback">
-                    Looks good!
+                    ingrese su apellido
                 </div>
             </div>
 
             <div class="col-md-12">
                 <label for="validationServer05" class="form-label">Dirección</label>
-                <input type="text" class="form-control is-valid" id="validationServer05"
-                    aria-describedby="validationServer03Feedback" required>
+                <input type="text" class="form-control" id="validationServer05"
+                    aria-describedby="validationServer03Feedback" required placeholder="ingrese su dirección">
                 <div id="validationServer05Feedback" class="valid-feedback">
-                    Please provide a valid city.
+                    ingrese su dirección
                 </div>
             </div>
 
             <div class="col-md-12">
                 <label for="validationServer06" class="form-label">Comuna</label>
-                <select class="form-select is-valid" id="validationServer06"
+                <select class="form-select" id="validationServer06"
                     aria-describedby="validationServer04Feedback" required>
                     <option selected disabled value="">Eliga una comuna...</option>
                     <option>Valdivia</option>
@@ -67,15 +69,15 @@
                     <option>Mafil</option>
                 </select>
                 <div id="validationServer06Feedback" class="valid-feedback">
-                    Please select a valid state.
+                    seleccione la comuna
                 </div>
             </div>
 
             
-            <h1>Datos Vehículo</h1>
+            <h2>Datos Vehículo</h2>
             <div class="col-md-12">
                 <label for="validationServer07" class="form-label">Tipo de vehículo</label>
-                <select class="form-select is-valid" id="validationServer07"
+                <select class="form-select" id="validationServer07"
                     aria-describedby="validationServer07Feedback" required>
                     <option selected disabled value="">Elija un tipo...</option>
                     <option>furgón</option>
@@ -90,23 +92,23 @@
             </div>
             <div class="col-md-4">
                 <label for="validationServer08" class="form-label">Marca</label>
-                <input type="text" class="form-control is-valid" id="validationServer08" value="" required>
+                <input type="text" class="form-control" id="validationServer08" value="" required placeholder="indique la marca de su vehiculo">
                 <div class="valid-feedback">
-                    Looks good!
+                    indique la marca de su vehiculo
                 </div>
             </div>
             <div class="col-md-4">
                 <label for="validationServer09" class="form-label">Modelo</label>
-                <input type="text" class="form-control is-valid" id="validationServer09" value="" required>
+                <input type="text" class="form-control" id="validationServer09" value="" required placeholder=" ingrese el modelo">
                 <div class="valid-feedback">
-                    Looks good!
+                    ingrese el modelo
                 </div>
             </div>
             <div class="col-md-4">
                 <label for="validationServer10" class="form-label">Año</label>
-                <input type="text" class="form-control is-valid" id="validationServer10" value="" required>
+                <input type="number" class="form-control" id="validationServer10" value="" required placeholder=" ingrese el año">
                 <div class="valid-feedback">
-                    Looks good!
+                    ingrese el año
                 </div>
             </div>
             <div class="col-md-6">
@@ -119,9 +121,12 @@
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" requerid>
                     <label class="form-check-label" for="inlineRadio2">No</label>
                   </div>
+                  <div class="valid-feedback">
+                    seleccione una opción
+                </div>
             </div>
 
-            <h1>Servicios</h1>
+            <h2>Servicios</h2>
             <div class="col-md-12">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="chkExterior">
@@ -141,10 +146,10 @@
               
             </div>
            
-            <h1>Encargado</h1>
+            <h2>Encargado</h2>
             <div class="col-md-12">
-                <label for="validationServer13" class="form-label">Tipo de vehículo</label>
-                <select class="form-select is-valid" id="validationServer13"
+                <label for="validationServer13" class="form-label">Nombre Trabajador</label>
+                <select class="form-select" id="validationServer13"
                     aria-describedby="validationServer13Feedback" required>
                     <option selected disabled value="">Seleccione al encargado...</option>
                     <option>Juan Perez</option>
@@ -156,17 +161,17 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label for="validationServer14" class="form-label">fecha del servicio</label>
-                <input type="date" class="form-control is-valid" id="validationServer14" value="" required>
+                <label for="validationServer14" class="form-label">Fecha del servicio</label>
+                <input type="date" class="form-control" id="validationServer14" value="" required placeholder="marque la fecha en que quiere que se realice el servicio">
                 <div class="valid-feedback">
-                    Looks good!
+                    marque la fecha en que quiere que se realice el servicio
                 </div>
             </div>
             <div class="col-md-6">
                 <label for="validationServer15" class="form-label">Hora del servicio</label>
-                <input type="time" class="form-control is-valid" id="validationServer15" value="" required>
+                <input type="time" class="form-control" id="validationServer15" value="" required placeholder=" seleccione la Hora">
                 <div class="valid-feedback">
-                    Looks good!
+                    seleccione la Hora
                 </div>
             </div>
             <div class="col-12">
